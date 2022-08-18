@@ -43,28 +43,7 @@
          localStorage.setItem("role_name", data2.data.account_info.role_name);
  
          navigate("home", { replace: false});
-         // const response = await fetch(
-         //     "http://localhost:8080/login",
-         //     {
-         //         method: "POST",
-         //         headers: {
-         //             Accept: "application/json",
-         //             'Content-Type': 'application/json',
-         //         },
-         //         body: JSON.stringify({
-         //             username: username,
-         //             password: password
-         //         })
-         //     }
-         // );
-         
-         // const data = await response.json();
-     
-         // console.log(data);
- 
-         // if( data.result) {
-         //     navigate("home", { replace: false});
-         // }
+  
      }
  
      const getAuthenToken = async () =>{

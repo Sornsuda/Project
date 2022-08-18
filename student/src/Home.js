@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Navigate } from "react-router-dom";
-import ProductItem from "./Productltem";
+//import ProductItem from "./Productltem";
 export default function Home(){
 
 const [productTypes, setProductTypes] = useState([]);
@@ -38,27 +38,8 @@ useEffect(() => {
     }
     return(
         
-        <>
-        <div className="container">
-            <select value={productTypeId} onChange={(e)=> setProductTypeId(e.target.value)}>
-                <option value={0}>ทุกประเภทสินค้า</option>
-            {
-            productTypes.map(item => (
-                <option key={item.product_type_id} value={item.product_type_id}>{item.product_type_name}</option>
-            ))
-        }
-        </select>
-
-        <Link to={"/product/add"} className="btn btn-outline-primary me-3">เพิ่ม</Link>
-    <div className="rmt-3">
-    {
-        products.map(item => (
-            <ProductItem key={item.product_id} data={item} />
-        ))
-    }
-    </div>
-
-</div>
+       <>
+        <h1>admin</h1>
         </>
     );
 }
