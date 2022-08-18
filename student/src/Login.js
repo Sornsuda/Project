@@ -4,7 +4,7 @@
  import { useState } from 'react';
  import { Form, Row, Col, Button } from 'react-bootstrap';
  import { useNavigate } from 'react-router-dom';
- 
+ import ("./style.css")
  var md5 = require("md5");
  export default function Login() {
      const [validated, setValidated] = useState(false);
@@ -92,11 +92,15 @@
      }
  
      return (
+        <>
+        <div className='container login-hd'>
+            <h1>11122</h1>
+        </div>
          <div className='container m-auto'>
              <Form noValidate validated={validated} onSubmit={onLogin}>
                  <Row className="mb-3">
                      <Form.Group as={Col} controlId="validateUsername">
-                         <Form.Label>Username</Form.Label>
+                         
                          <Form.Control
                              required
                              type="text"
@@ -110,7 +114,7 @@
                  </Row>
                  <Row className="mb-3">
                      <Form.Group as={Col} controlId="validatePassword">
-                         <Form.Label>Password</Form.Label>
+                        
                          <Form.Control type="password" placeholder="Password" required onChange={(e) => setPassword(e.target.value)}/>
                          <Form.Control.Feedback type="invalid">
                              กรุณากรอก Password
@@ -124,6 +128,7 @@
                  </Row>
              </Form>
          </div>
+         </>
      );
  }
  
