@@ -1,3 +1,4 @@
+
 .login-hd{
     width: 100%;
     height: 150px;
@@ -7,21 +8,30 @@
 
 .m-auto{
     width: 100%;
-    height: 150px;
+    height: 550px;
     background-color: rgba(210, 209, 209, 1);
     display: block;
-}
-
-.m-auto{
-    text-align: center;
 }
 
 .m-auto button{
     background-color: rgba(0, 60, 113, 1);
     text-align: center;
 }
+.login-hd h3{
+    color: white;
+    text-align: right;
+}
+
+.login-hd h4{
+    color: rgba(0, 209, 255, 1);
+    text-align: right;
+}
 
 .m-auto form{
     width: 250px;
     height: 50px;
+}
+
+.login-hd text{
+    text-align: center;
 }

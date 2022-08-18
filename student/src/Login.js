@@ -93,8 +93,9 @@
  
      return (
         <>
-        <div className='container login-hd'>
-            <h1>11122</h1>
+        <div className='container login-hd'>    
+            <h3>ระบบบันทึกข้อมูลสหกิจศึกษาและฝึกงาน มหาวิทยาลัยสงขลานครินทร์</h3>
+            <h4>PSU Cooperative Education and Internship Recording System</h4>
         </div>
          <div className='container m-auto'>
              <Form noValidate validated={validated} onSubmit={onLogin}>
