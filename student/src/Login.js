@@ -42,9 +42,7 @@
          localStorage.setItem("address", data2.data.account_info.address);
          localStorage.setItem("role_id", data2.data.account_info.role_id);
          localStorage.setItem("role_name", data2.data.account_info.role_name);
-         localStorage.setItem("status", data2.data.access_info.status);
-        
-         if(localStorage.getItem("status"))
+ 
          navigate("home", { replace: false});
   
      }
@@ -91,7 +89,6 @@
              }
          );
          const data = await response.json();
-         console.log("data acc:"+data.auto_token);
          return data;
      }
  
@@ -101,10 +98,10 @@
             <h1>ระบบบันทึกข้อมูลสหกิจศึกษาและฝึกงาน มหาวิทยาลัยสงขลานครินทร์</h1>
             <h2>PSU Cooperative Education and Internship Recording System</h2>
         </div>
-         <div className='bg-login  ' style={{margin:"10"}}>
-            <div className='bg-login ' >
+         <div className=' bg-login' style={{margin:"10"}}>
+            <div className='bg-login'>
              <Form noValidate validated={validated} onSubmit={onLogin}>
-                <div className='grid'>
+                <div className='col-2 grid'>
                 <Row className="mb-3 " >
                      <Form.Group as={Col} controlId="validateUsername">
                          
@@ -114,7 +111,7 @@
                              placeholder="Username"
                              onChange={(e) => setUsername(e.target.value)}
                          />
-                         <Form.Control.Feedback  type="invalid">
+                         <Form.Control.Feedback type="invalid">
                              กรุณากรอก Username
                          </Form.Control.Feedback>
                      </Form.Group>
