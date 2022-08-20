@@ -6,6 +6,7 @@
  import { useNavigate } from 'react-router-dom';
  import ("./style.css")
  var md5 = require("md5");
+
  export default function Login() {
      const [validated, setValidated] = useState(false);
      const [username, setUsername] = useState("");
@@ -93,13 +94,15 @@
  
      return (
         <>
-        <div className='container login-hd'>    
-            <h2>ระบบบันทึกข้อมูลสหกิจศึกษาและฝึกงาน มหาวิทยาลัยสงขลานครินทร์</h2>
-            <h3>PSU Cooperative Education and Internship Recording System</h3>
+        <div className='container-fluid login-hd'>    
+            <h1>ระบบบันทึกข้อมูลสหกิจศึกษาและฝึกงาน มหาวิทยาลัยสงขลานครินทร์</h1>
+            <h2>PSU Cooperative Education and Internship Recording System</h2>
         </div>
-         <div className='container m-auto'>
+         <div className='bg-login  ' style={{margin:"10"}}>
+            <div className='bg-login ' >
              <Form noValidate validated={validated} onSubmit={onLogin}>
-                 <Row className="mb-3">
+                <div className='grid'>
+                <Row className="mb-3 " >
                      <Form.Group as={Col} controlId="validateUsername">
                          
                          <Form.Control
@@ -108,7 +111,7 @@
                              placeholder="Username"
                              onChange={(e) => setUsername(e.target.value)}
                          />
-                         <Form.Control.Feedback type="invalid">
+                         <Form.Control.Feedback  type="invalid">
                              กรุณากรอก Username
                          </Form.Control.Feedback>
                      </Form.Group>
@@ -123,11 +126,13 @@
                      </Form.Group>
                  </Row>
                  <Row>
-                     <Col md={3}>
+                     <Col md={3} className="m-auto">
                          <Button type="submit">Login</Button>
                      </Col>
                  </Row>
+                </div>
              </Form>
+             </div>
          </div>
          </>
      );
