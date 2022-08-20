@@ -43,7 +43,7 @@
          localStorage.setItem("role_id", data2.data.account_info.role_id);
          localStorage.setItem("role_name", data2.data.account_info.role_name);
  
-         navigate("home", { replace: false});
+         navigate("Generalinfo", { replace: false});
   
      }
  
