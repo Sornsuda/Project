@@ -42,7 +42,9 @@
          localStorage.setItem("address", data2.data.account_info.address);
          localStorage.setItem("role_id", data2.data.account_info.role_id);
          localStorage.setItem("role_name", data2.data.account_info.role_name);
- 
+         localStorage.setItem("status", data2.data.access_info.status);
+        
+         if(localStorage.getItem("status"))
          navigate("home", { replace: false});
   
      }
@@ -89,6 +91,7 @@
              }
          );
          const data = await response.json();
+         console.log("data acc:"+data.auto_token);
          return data;
      }
  

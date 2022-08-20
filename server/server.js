@@ -93,9 +93,10 @@ app.post("/api/access_request", (req, res) => {
     var decoded = jwt.verify(authToken, "MySecretKey");
 
     if (decoded) {
-        const query = "SELECT a.user_id, a.user_name, a.first_name, a.last_name, a.role_id, b.role_name "
+        const query = "SELECT a.user_id, a.user_name, a.first_name, a.last_name, a.role_id, a.status, b.role_name "
             + "FROM users a JOIN roles b ON a.role_id = b.role_id WHERE MD5(CONCAT(user_name, '&', user_pwd)) =  ?";
         pool.query(query,[authenSignature], (error,results) =>{
+            
             var response;
             if (error) {
                 response = {
@@ -106,7 +107,7 @@ app.post("/api/access_request", (req, res) => {
                 if (results.length) {
                     var payload = {
                         user_id: results[0].user_id, username: results[0].username, first_name: results[0].first_name,
-                        last_name: results[0].lastname, 
+                        last_name: results[0].lastname, status: results[0].status,
                         role_id: results[0].role_id, role_name: results[0].role_name
                     };
                     const accessToken = jwt.sign(payload, "MySecretKey");
