@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import Login from './Login';
 import reportWebVitals from './reportWebVitals';
+import Generalinfo from '../componets/student/Generalinfo';
 import{
   BrowserRouter,
   Routes,
@@ -16,6 +17,8 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="home" element={<Home />} />
+      <Route path="Generalinfo" element={<Generalinfo />} />
+
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')
