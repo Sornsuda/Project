@@ -11,27 +11,29 @@
     height: 550px;
     background-color: rgba(210, 209, 209, 1);
     display: block;
+    
 }
 
 .m-auto button{
     background-color: rgba(0, 60, 113, 1);
-    text-align: center;
 }
-.login-hd h3{
+.login-hd h2{
     color: white;
     text-align: right;
 }
 
-.login-hd h4{
+.login-hd h3{
     color: rgba(0, 209, 255, 1);
     text-align: right;
 }
 
 .m-auto form{
-    width: 250px;
+    width: 30%;
     height: 50px;
-}
-
-.login-hd text{
     text-align: center;
 }
+
+.m-auto {
+    top: 1500px;
+}
+

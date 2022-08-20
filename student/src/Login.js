@@ -94,8 +94,8 @@
      return (
         <>
         <div className='container login-hd'>    
-            <h3>ระบบบันทึกข้อมูลสหกิจศึกษาและฝึกงาน มหาวิทยาลัยสงขลานครินทร์</h3>
-            <h4>PSU Cooperative Education and Internship Recording System</h4>
+            <h2>ระบบบันทึกข้อมูลสหกิจศึกษาและฝึกงาน มหาวิทยาลัยสงขลานครินทร์</h2>
+            <h3>PSU Cooperative Education and Internship Recording System</h3>
         </div>
          <div className='container m-auto'>
              <Form noValidate validated={validated} onSubmit={onLogin}>
