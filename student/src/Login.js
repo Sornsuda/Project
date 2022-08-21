@@ -94,7 +94,7 @@
  
      return (
         <>
-        <div className='container-fluid login-hd'>    
+        <div className='container-fluid login-hd'>     
             <h1>ระบบบันทึกข้อมูลสหกิจศึกษาและฝึกงาน มหาวิทยาลัยสงขลานครินทร์</h1>
             <h2>PSU Cooperative Education and Internship Recording System</h2>
         </div>
@@ -123,7 +123,7 @@
                          <Form.Control.Feedback type="invalid">
                              กรุณากรอก Password
                          </Form.Control.Feedback>
-                     </Form.Group>
+                     </Form.Group> 
                  </Row>
                  <Row>
                      <Col md={3} className="m-auto">

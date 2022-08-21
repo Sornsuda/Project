@@ -22,7 +22,7 @@ var pool = mysql.createPool({
     host: "localhost",
     user: "root",
     password: "",
-    database: "psu-ceirs"
+    database: "psu-ceirss"
 })
 
 pool.query = util.promisify(pool.query);
