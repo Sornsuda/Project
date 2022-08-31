@@ -9,7 +9,7 @@ export default function Homeadmin(){
 return(
 <>
         <div className='container-fluid home-hd'>   
-
+        <img src="/student/img/logo.png" ></img>
             <h1>ระบบบันทึกข้อมูลสหกิจศึกษาและฝึกงาน มหาวิทยาลัยสงขลานครินทร์</h1>
             <h2>PSU Cooperative Education and Internship Recording System</h2>
         </div>
@@ -38,9 +38,11 @@ return(
                     {
                         
                     }
-
                 </Form.Select>
         </Form.Group>
+        <div className='bg-homes' style={{margin:"10"}}>
+
+        </div>
         
             
 
